@@ -1,5 +1,5 @@
-Automatic Updating in PowerShell 
-=================================
+Automatic Updating in PowerShell Universal
+==========================================
 
 This method of automatic updating for PSU works as of 1.5.12. This could stop working at any time, as it is solely based on the functionality of PSU, and the information currently available to me. It is entirely possible this method is outside of the scope of how [@Adam] at IronManSoftware (IMS) wants this software to be used and will kindly ask for it *not* to be used this way. Currently, this guide serves only to demonstrate how *I* have implemented this in my environment. 
 
@@ -141,5 +141,6 @@ If you found this guide useful or interesting and would like to see expanded fun
  
 
 [GitHub - PowerShellUniversal.AutomaticUpdates](https://github.com/rbleattler/PowerShellUniversal.AutomaticUpdates)
+[IronmanSoftware Community - PowerShellUniversal.AutomaticUpdates](https://forums.universaldashboard.io/t/powershell-universal-automatic-updates/4458?u=rbleattler)
 
  
