@@ -1,7 +1,7 @@
 function Invoke-UniversalUpdateTask {
     [CmdletBinding(SupportsShouldProcess)]
     param (
-        $ScriptPath = $(Resolve-Path "$PSScriptRoot\..\..\..\Scripts\UpdateUniversal.ps1"),
+        $ScriptPath = $(Resolve-Path "$PSScriptRoot\UpdateUniversal.ps1"),
         [string]
         $AppPoolName = 'UniversalAutomationAppPool',
         [string]
