@@ -1,0 +1,2 @@
+New-PSUScript -Name "CheckForUniversalUpdates" -Description "Check for new releases of Universal. Update cached info." -Path "CheckForUniversalUpdates.ps1" -Environment "5.1.17763.1490" -ErrorAction "Continue" -InformationAction "Continue" -MaxHistory 5   
+New-PSUScript -Name "GetLatestUniversalRelease" -Description "Update Universal if there is a new version." -Path "GetLatestUniversalRelease.ps1" -Environment "7.1.1" -ErrorAction "Continue" -InformationAction "Continue" -MaxHistory 5 
