@@ -35,8 +35,8 @@ These would be the path with the *default* installation. My installation looks a
 
 | Variable Name    | Value                                |
 |------------------|--------------------------------------|
-| UAPath           | C:\\ProgramData\\PowerShellUniversal |
-| PSUPath          | C:\\ProgramData\\UniversalAutomation |
+| PSUPath           | C:\\ProgramData\\PowerShellUniversal |
+| UAPath          | C:\\ProgramData\\UniversalAutomation |
 | PSUWebServerPath | C:\\inetpub\\PowerShellUniversal     |
 
  
