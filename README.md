@@ -18,15 +18,14 @@ The following section describes how the environment was configured for *my* impl
 
 ### Host
 
-+-------------------------+---------------------+
+
+|                         |                     |
+|-------------------------|---------------------|
 | Operating System        | Windows Server 2019 |
-+-------------------------+---------------------+
 | RAM                     | 16GB                |
-+-------------------------+---------------------+
 | Processor(s)            | 6 Cores \@ 3GHz     |
-+-------------------------+---------------------+
 | PowerShell Environments | 7.1.x, 5.1.x        |
-+-------------------------+---------------------+
+
 
  
 
@@ -34,13 +33,11 @@ The following section describes how the environment was configured for *my* impl
 
 These would be the path with the *default* installation. My installation looks a bit different. I set these variables in the environment so they can be accessed both within, and outside of PowerShell Universal. 
 
-+------------------+--------------------------------------+
+| Variable Name    | Value                                |
+|------------------|--------------------------------------|
 | UAPath           | C:\\ProgramData\\PowerShellUniversal |
-+------------------+--------------------------------------+
 | PSUPath          | C:\\ProgramData\\UniversalAutomation |
-+------------------+--------------------------------------+
 | PSUWebServerPath | C:\\inetpub\\PowerShellUniversal     |
-+------------------+--------------------------------------+
 
  
 
