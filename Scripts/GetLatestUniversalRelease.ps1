@@ -91,7 +91,7 @@ $CurrentRelease = Get-PSUCache -Key CurrentRelease
 $CurrentReleaseUrl = Get-PSUCache -Key CurrentReleaseUrl
 $CurrentVersion = Get-PSUCache -Key CurrentVersion
 $CR = 'Current Release: {0}' -f $CurrentRelease
-$CRU = 'Current Release: {0}' -f $CurrentReleaseUrl
+$CRU = 'Current Release URI: {0}' -f $CurrentReleaseUrl
 $CV = 'Current Version: {0}' -f $CurrentVersion
 Write-Output $CR 
 Write-Output $CRU 
