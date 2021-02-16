@@ -4,7 +4,7 @@ param (
     [string]
     $BuildType,
     [string]
-    $InstallDirectory = '{0}\Installation' -f $Env:PSUPATH
+    $InstallDirectory = ('{0}\Installation' -f $Env:PSUPATH)
 )
 
 switch ($BuildType) {
