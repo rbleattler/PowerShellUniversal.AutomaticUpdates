@@ -2,7 +2,9 @@
 param (
     [ValidateSet('Production', 'Nightly')]
     [string]
-    $BuildType
+    $BuildType,
+    [string]
+    $InstallDirectory = '{0}\Installation' -f $Env:PSUPATH
 )
 
 switch ($BuildType) {
@@ -14,16 +16,17 @@ switch ($BuildType) {
         $NewestVersion = Invoke-RestMethod -Method Get -Uri $VersionUri
     }
 }
-$UniversalListUri = 'https://imsreleases.blob.core.windows.net/{0}?restype=container&comp=list' -f $BuildTypeKeyWord
+$UniversaleReleaseBlobUri = 'https://imsreleases.blob.core.windows.net/{0}' -f $BuildTypeKeyWord
+$UniversalListUri = '{0}?restype=container&comp=list' -f $UniversaleReleaseBlobUri
+# This is only used for Production builds
+$VersionUri = '{0}/production/version.txt' -f $UniversaleReleaseBlobUri
+$UniversalModule = ConvertFrom-Metadata "$InstallDirectory\universal.psd1"
 
 $Message = 'Setting Location to {0}...' -f $Env:UAPath
 Write-Output $Message 
 Set-Location $Env:UAPath
-$Message = 'Setting Install Directory to {0}\Installation...' -f $Env:PSUPath
+$Message = 'Setting Install Directory to {0}...' -f $InstallDirectory
 Write-Output $Message 
-$InstallDirectory = '{0}\Installation' -f $Env:PSUPATH
-$UniversalModule = ConvertFrom-Metadata "$InstallDirectory\universal.psd1"
-$VersionUri = 'https://imsreleases.blob.core.windows.net/universal/production/version.txt'
 if ($PSEdition -eq 'Core' -and -not $IsWindows) {
     if ($IsMacOs) {
         $InstallationType = 'osx-x64'
